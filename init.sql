@@ -8,4 +8,4 @@ CREATE TABLE users (
 INSERT INTO users (name, email) VALUES
 ('James', 'james@example.com'),
 ('Alice', 'alice@example.com');
-
+('bran', 'bran@example.com');
