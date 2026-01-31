@@ -1,0 +1,31 @@
+services:
+    python_app:
+        build: .
+        container_name: myapp
+        ports:
+          - "5000:5000"
+        networks:
+          - my_net
+        restart: always
+        depends_on:
+          - mysql
+
+    mysql:
+        image: mysql
+        container_name: mysql_container
+        ports:
+          - "3306:3306"
+        networks:
+          - my_net
+        volumes:
+          - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+        environment:
+          - MYSQL_ROOT_PASSWORD=${mysqlrootpass}
+          - MYSQL_USER=${mysqluser}
+          - MYSQL_PASSWORD=${mysqlpass}
+          - MYSQL_DATABASE=${mysqldatabase}
+        restart: always
+networks:
+   my_net:
+       name: my_net
+
