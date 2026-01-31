@@ -6,4 +6,8 @@ CREATE TABLE users (
 
 
 INSERT INTO users (name, email) VALUES
-
+('James', 'james@example.com'),
+('Alice', 'alice@example.com');
+('Sam', 'Sam@example.com');
+('John', 'John@example.com');
+('Bran', 'Bran@example.com');
