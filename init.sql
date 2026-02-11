@@ -7,5 +7,9 @@ CREATE TABLE users (
 
 INSERT INTO users (name, email) VALUES
 ('James', 'james@example.com'),
-('Alice', 'alice@example.com');
-
+('Alice', 'alice@example.com'),
+('Sam', 'Sam@example.com'),
+('John', 'John@example.com'),
+('Alex', 'alex@example.com'),
+('steve', 'steve@example.com'),
+('Bran', 'Bran@example.com');
